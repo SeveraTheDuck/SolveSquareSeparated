@@ -1,8 +1,3 @@
-// doxygen
-// github & git
-// readme?
-// bash для запуска флагов
-
 #include "header.h"
 
 int main(int argc, char** argv)

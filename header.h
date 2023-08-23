@@ -5,6 +5,9 @@
 #include <math.h>
 #include <assert.h>
 
+/**
+    \brief This enum names cases of different number of roots
+*/
 enum TypeOfRoots
 {
     SS_NO_ROOTS = 0,
@@ -13,6 +16,9 @@ enum TypeOfRoots
     SS_INF_ROOTS = 3
 };
 
+/**
+    \brief This constant is being used for double comparison
+*/
 const double EPS = 1.0e-9;
 
 #include "simple.h"
