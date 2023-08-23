@@ -2,6 +2,7 @@
 
 bool GetInput(double* a, double* b, double* c)
 {
+    printf("Please, type the coefficients: ");
     assert(a != NULL);
     assert(b != NULL);
     assert(c != NULL);
@@ -24,7 +25,7 @@ bool GetInput(double* a, double* b, double* c)
     return true;
 }
 
-void PrintOutput(TypeOfRoots number_of_roots, double x1, double x2)
+void PrintOutput(const TypeOfRoots number_of_roots, const double x1, const double x2)
 {
     switch(number_of_roots)
     {

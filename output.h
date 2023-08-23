@@ -9,6 +9,6 @@ bool GetInput(double* a, double* b, double* c);
 /**
     \brief This function prints a sentence about number of roots and prints them if exist
 */
-void PrintOutput(TypeOfRoots number_of_roots, double x1, double x2);
+void PrintOutput(const TypeOfRoots number_of_roots, const double x1, const double x2);
 
 #endif

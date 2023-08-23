@@ -1,6 +1,19 @@
 #include "header.h"
 
-TypeOfRoots SolveLinearEquation(double b, double c, double* x1)
+TypeOfRoots SolveGivenEquation(const double a, const double b, const double c,
+                                double* x1, double* x2)
+{
+    if (CompareEquality(a, 0))                                                 // linear equation case
+    {
+        return SolveLinearEquation(b, c, x1);
+    }
+    else
+    {
+        return SolveQuadraticEquation(a, b, c, x1, x2);           // square equation case
+    }
+}
+
+TypeOfRoots SolveLinearEquation(const double b, const double c, double* x1)
 {
     assert(x1 != NULL);
 
@@ -20,7 +33,7 @@ TypeOfRoots SolveLinearEquation(double b, double c, double* x1)
     }
 }
 
-TypeOfRoots SolveQuadraticEquation(double a, double b, double c, double* x1, double* x2)
+TypeOfRoots SolveQuadraticEquation(const double a, const double b, const double c, double* x1, double* x2)
 {
     assert(x1 != NULL);
     assert(x2 != NULL);

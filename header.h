@@ -24,5 +24,6 @@ const double EPS = 1.0e-9;
 #include "simple.h"
 #include "solve.h"
 #include "output.h"
+#include "test.h"
 
 #endif

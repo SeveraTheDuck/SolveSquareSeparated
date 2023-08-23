@@ -1,16 +1,16 @@
 #include "header.h"
 
-double FindDiscriminant(double a, double b, double c)
+double FindDiscriminant(const double a, const double b, const double c)
 {
     return b * b - 4 * a * c;
 }
 
-double FindFirstRoot(double sqrt_D, double a, double b)
+double FindFirstRoot(const double sqrt_D, const double a, const double b)
 {
     return (-b + sqrt_D) / (2 * a);
 }
 
-double FindSecondRoot(double sqrt_D, double a, double b)
+double FindSecondRoot(const double sqrt_D, const double a, const double b)
 {
     return (-b - sqrt_D) / (2 * a);
 }
