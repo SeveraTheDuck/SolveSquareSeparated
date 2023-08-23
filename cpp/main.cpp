@@ -1,5 +1,8 @@
 #include "../headers/header.h"
 
+//структуры
+//makefile
+
 int main(int argc, char** argv)
 {
     double a = 0, b = 0, c = 0;                                                // a, b, c - square equation sort of ax^2 + bx + c = 0
