@@ -6,19 +6,21 @@
     depending on coefficient before x^2;
 */
 
-TypeOfRoots SolveGivenEquation(const double a, const double b, const double c,
-                                double* x1, double* x2);
+TypeOfRoots SolveGivenEquation(const struct CoefficientsStruct equation_coefficients,
+                                struct RootsStruct* equation_roots);
 
 /**
     \brief This function solves the linear equation and
     returns number of its roots.
 */
-TypeOfRoots SolveLinearEquation(const double b, const double c, double* x1);
+TypeOfRoots SolveLinearEquation(const struct CoefficientsStruct equation_coefficients,
+                                struct RootsStruct* equation_roots);
 
 /**
     \brief This function solves the quadratic equation and
     returns number of its roots.
 */
-TypeOfRoots SolveQuadraticEquation(const double a, const double b, const double c, double* x1, double* x2);
+TypeOfRoots SolveQuadraticEquation(const struct CoefficientsStruct equation_coefficients,
+                                struct RootsStruct* equation_roots);
 
 #endif

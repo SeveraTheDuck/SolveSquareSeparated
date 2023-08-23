@@ -1,66 +1,54 @@
 #include "../headers/header.h"
 
-bool GetInput(double* a, double* b, double* c)
+bool GetInput(struct CoefficientsStruct* equation_coefficients)
 {
     printf("Please, type the coefficients: ");
-    assert(a != NULL);
-    assert(b != NULL);
-    assert(c != NULL);
-    assert(a != b);
-    assert(a != c);
-    assert(b != c);
+    assert(equation_coefficients != NULL);
 
-    if (scanf("%lf", a) != 1) return false;
-    if (scanf("%lf", b) != 1) return false;
-    if (scanf("%lf", c) != 1) return false;
+    if (scanf("%lf", &(equation_coefficients->a)) != 1) return false;
+    if (scanf("%lf", &(equation_coefficients->b)) != 1) return false;
+    if (scanf("%lf", &(equation_coefficients->c)) != 1) return false;
 
-    assert(isfinite(*a));
-    assert(isfinite(*b));
-    assert(isfinite(*c));
+    assert(isfinite(equation_coefficients->a));
+    assert(isfinite(equation_coefficients->b));
+    assert(isfinite(equation_coefficients->c));
 
-    assert(!isnan(*a));
-    assert(!isnan(*b));
-    assert(!isnan(*c));
+    assert(!isnan(equation_coefficients->a));
+    assert(!isnan(equation_coefficients->b));
+    assert(!isnan(equation_coefficients->c));
 
     return true;
 }
 
-bool GetFileInput(FILE* fp, double* a, double* b, double* c,
-                    double* x1_ref, double* x2_ref,
-                    int* number_of_roots_ref)
+bool GetFileInput(FILE* fp, struct TestsStruct* test_container)
 {
-    assert(a != NULL);
-    assert(b != NULL);
-    assert(c != NULL);
-    assert(x1_ref != NULL);
-    assert(x2_ref != NULL);
-    assert(number_of_roots_ref != NULL);
+    assert(test_container != NULL);
 
-    if (fscanf(fp, "%lf", a) != 1) return false;
-    if (fscanf(fp, "%lf", b) != 1) return false;
-    if (fscanf(fp, "%lf", c) != 1) return false;
-    if (fscanf(fp, "%lf", x1_ref) != 1) return false;
-    if (fscanf(fp, "%lf", x2_ref) != 1) return false;
-    if (fscanf(fp, "%d", number_of_roots_ref) != 1) return false;
+    if (fscanf(fp, "%lf", &(test_container->a)) != 1) return false;
+    if (fscanf(fp, "%lf", &(test_container->b)) != 1) return false;
+    if (fscanf(fp, "%lf", &(test_container->c)) != 1) return false;
+    if (fscanf(fp, "%lf", &(test_container->x1_ref)) != 1) return false;
+    if (fscanf(fp, "%lf", &(test_container->x2_ref)) != 1) return false;
+    if (fscanf(fp, "%d", &(test_container->number_of_roots_ref)) != 1) return false;
 
-    assert(isfinite(*a));
-    assert(isfinite(*b));
-    assert(isfinite(*c));
-    assert(isfinite(*x1_ref));
-    assert(isfinite(*x2_ref));
-    assert(isfinite(*number_of_roots_ref));
+    assert(isfinite(test_container->a));
+    assert(isfinite(test_container->b));
+    assert(isfinite(test_container->c));
+    assert(isfinite(test_container->x1_ref));
+    assert(isfinite(test_container->x2_ref));
+    assert(isfinite(test_container->number_of_roots_ref));
 
-    assert(!isnan(*a));
-    assert(!isnan(*b));
-    assert(!isnan(*c));
-    assert(!isnan(*x1_ref));
-    assert(!isnan(*x2_ref));
-    assert(!isnan(*number_of_roots_ref));
+    assert(!isnan(test_container->a));
+    assert(!isnan(test_container->b));
+    assert(!isnan(test_container->c));
+    assert(!isnan(test_container->x1_ref));
+    assert(!isnan(test_container->x2_ref));
+    assert(!isnan(test_container->number_of_roots_ref));
 
     return true;
 }
 
-void PrintOutput(const TypeOfRoots number_of_roots, const double x1, const double x2)
+void PrintOutput(const TypeOfRoots number_of_roots, const struct RootsStruct equation_roots)
 {
     switch(number_of_roots)
     {
@@ -68,10 +56,10 @@ void PrintOutput(const TypeOfRoots number_of_roots, const double x1, const doubl
             printf("Cannot be solved");
             break;
         case TypeOfRoots::SS_ONE_ROOT:
-            printf("The only root is %lf", x1);
+            printf("The only root is %lf", equation_roots.x1);
             break;
         case TypeOfRoots::SS_TWO_ROOTS:
-            printf("The quadratic equation has two roots:\nx1 = %lf and x2 = %lf", x1, x2);
+            printf("The quadratic equation has two roots:\nx1 = %lf and x2 = %lf", equation_roots.x1, equation_roots.x2);
             break;
         case TypeOfRoots::SS_INF_ROOTS:
             printf("Infinite number of roots");
