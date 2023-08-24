@@ -3,24 +3,29 @@
 
 /**
     \brief This function calls for SolveLinearEquation or SolveQuadraticEquation
-    depending on coefficient before x^2;
-*/
+    functions.
 
-TypeOfRoots SolveGivenEquation(const struct CoefficientsStruct equation_coefficients,
+    The choice between them depends on coefficient a (before x^2).
+*/
+TypeOfRoots SolveGivenEquation(const struct CoefficientsStruct* equation_coefficients,
                                 struct RootsStruct* equation_roots);
 
 /**
     \brief This function solves the linear equation and
     returns number of its roots.
+
+    It is being called if coefficient a (before x^2) equals to zero.
 */
-TypeOfRoots SolveLinearEquation(const struct CoefficientsStruct equation_coefficients,
+TypeOfRoots SolveLinearEquation(const struct CoefficientsStruct* equation_coefficients,
                                 struct RootsStruct* equation_roots);
 
 /**
     \brief This function solves the quadratic equation and
     returns number of its roots.
+
+    It is being called if coefficient a (before x^2) doesn't equal to zero.
 */
-TypeOfRoots SolveQuadraticEquation(const struct CoefficientsStruct equation_coefficients,
+TypeOfRoots SolveQuadraticEquation(const struct CoefficientsStruct* equation_coefficients,
                                 struct RootsStruct* equation_roots);
 
 #endif

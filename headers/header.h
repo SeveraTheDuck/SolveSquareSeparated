@@ -7,6 +7,8 @@
 
 /**
     \brief This enum names cases of different number of roots.
+
+    Solving the equation, you can face 4 different cases. They are stated here.
 */
 enum TypeOfRoots
 {
@@ -16,31 +18,38 @@ enum TypeOfRoots
     SS_INF_ROOTS = 3
 };
 
+/**
+    \brief This structure is being used to combine equation's coefficients into group.
+*/
 struct CoefficientsStruct
 {
-    double a = 0;
-    double b = 0;
-    double c = 0;
+    double a, b, c;
 };
 
+/**
+    \brief This structure is being used to combine equation's roots into group.
+*/
 struct RootsStruct
 {
-    double x1 = 0;
-    double x2 = 0;
+    double x1, x2;
 };
 
+/**
+    \brief This structure is being used to combine reference values for tests.
+
+    a, b, c stand for equation's coefficients,
+    x1_ref and x2_ref stand for equation's reference roots,
+    number_of_roots_ref stands for equation's reference number of roots.
+*/
 struct TestsStruct
 {
-    double a = 0;
-    double b = 0;
-    double c = 0;
-    double x1_ref = 0;
-    double x2_ref = 0;
+    double a, b, c;
+    double x1_ref, x2_ref;
     int number_of_roots_ref = SS_NO_ROOTS;
 };
 
 /**
-    \brief This constant is being used for double comparison
+    \brief This constant is being used for double comparison.
 */
 const double EPS = 1.0e-9;
 

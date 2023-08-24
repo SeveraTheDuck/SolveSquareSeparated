@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['unittests_0',['UnitTests',['../test_8cpp.html#aa5b111d96b3ed5f0f339713551353b20',1,'UnitTests():&#160;test.cpp'],['../test_8h.html#aa5b111d96b3ed5f0f339713551353b20',1,'UnitTests():&#160;test.cpp']]]
+  ['readme_2emd_0',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['rootsstruct_1',['RootsStruct',['../struct_roots_struct.html',1,'']]]
 ];

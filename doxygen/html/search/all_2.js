@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['finddiscriminant_0',['FindDiscriminant',['../simple_8cpp.html#a8384efeb3061c9efcf659713987e1d8f',1,'FindDiscriminant(const double a, const double b, const double c):&#160;simple.cpp'],['../simple_8h.html#a8384efeb3061c9efcf659713987e1d8f',1,'FindDiscriminant(const double a, const double b, const double c):&#160;simple.cpp']]],
-  ['findfirstroot_1',['FindFirstRoot',['../simple_8cpp.html#a0b54119e2fbbe530ccc86fe407de301a',1,'FindFirstRoot(const double sqrt_D, const double a, const double b):&#160;simple.cpp'],['../simple_8h.html#a0b54119e2fbbe530ccc86fe407de301a',1,'FindFirstRoot(const double sqrt_D, const double a, const double b):&#160;simple.cpp']]],
-  ['findsecondroot_2',['FindSecondRoot',['../simple_8cpp.html#a8bba81fd72bfd1193eb1186974634425',1,'FindSecondRoot(const double sqrt_D, const double a, const double b):&#160;simple.cpp'],['../simple_8h.html#a8bba81fd72bfd1193eb1186974634425',1,'FindSecondRoot(const double sqrt_D, const double a, const double b):&#160;simple.cpp']]]
+  ['c_0',['c',['../struct_coefficients_struct.html#a0528825188b0b3f6bda4304d82944704',1,'CoefficientsStruct::c'],['../struct_tests_struct.html#abdc841f9c75f9b23ce4eb8be29962b1c',1,'TestsStruct::c']]],
+  ['coefficientsstruct_1',['CoefficientsStruct',['../struct_coefficients_struct.html',1,'']]],
+  ['compareequality_2',['CompareEquality',['../simple_8cpp.html#a4e944c3a3156f6842a5707cd71a6bef6',1,'CompareEquality(const double a, const double b):&#160;simple.cpp'],['../simple_8h.html#a4e944c3a3156f6842a5707cd71a6bef6',1,'CompareEquality(const double a, const double b):&#160;simple.cpp']]]
 ];
