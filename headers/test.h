@@ -1,5 +1,7 @@
-#ifndef test_h
-#define test_h
+#ifndef __TEST_H
+#define __TEST_H
+
+
 
 /**
     \brief This function tests given equation.

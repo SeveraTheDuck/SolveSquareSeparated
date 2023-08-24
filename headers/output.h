@@ -1,5 +1,5 @@
-#ifndef output_h
-#define output_h
+#ifndef __IO_H
+#define __IO_H
 
 /**
     \brief This function scans 3 coefficients of the quadratic equation.

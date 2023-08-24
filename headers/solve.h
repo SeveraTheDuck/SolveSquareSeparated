@@ -1,5 +1,5 @@
-#ifndef solve_h
-#define solve_h
+#ifndef __SOLVE_H
+#define __SOLVE_H
 
 /**
     \brief This function calls for SolveLinearEquation or SolveQuadraticEquation
@@ -25,7 +25,7 @@ TypeOfRoots SolveLinearEquation(const struct CoefficientsStruct* equation_coeffi
 
     It is being called if coefficient a (before x^2) doesn't equal to zero.
 */
-TypeOfRoots SolveQuadraticEquation(const struct CoefficientsStruct* equation_coefficients,
+enum TypeOfRoots SolveQuadraticEquation(const struct CoefficientsStruct* equation_coefficients,
                                 struct RootsStruct* equation_roots);
 
 #endif

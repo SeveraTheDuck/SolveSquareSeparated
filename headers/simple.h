@@ -1,5 +1,5 @@
-#ifndef simple_h
-#define simple_h
+#ifndef __SIMPLE_H
+#define __SIMPLE_H
 
 /**
     \brief This function finds and returns discriminant of the

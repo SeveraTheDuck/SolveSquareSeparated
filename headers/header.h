@@ -1,5 +1,16 @@
-#ifndef header_h
-#define header_h
+#ifndef __HEADER_H
+#define __HEADER_H
+
+#define MYASSERT(expression)
+#ifdef _DEBUG
+    #undef MYASSERT
+    #define MYASSERT(expression) \
+        if (expression == 0) \
+        { \
+            printf("ERROR in file %s,\nline %d\n", __FILE__, __LINE__); \
+            abort(); \
+        }
+#endif
 
 #include <stdio.h>
 #include <math.h>
@@ -45,17 +56,12 @@ struct TestsStruct
 {
     double a, b, c;
     double x1_ref, x2_ref;
-    int number_of_roots_ref = SS_NO_ROOTS;
+    int number_of_roots_ref;
 };
 
 /**
     \brief This constant is being used for double comparison.
 */
 const double EPS = 1.0e-9;
-
-#include "simple.h"
-#include "solve.h"
-#include "output.h"
-#include "test.h"
 
 #endif
