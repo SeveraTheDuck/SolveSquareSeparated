@@ -19,15 +19,15 @@ it is highly recommend to run them). You can read how to enable test mode down b
     and Linux and *PowerShell* on Windows).
 3. In terminal, run file "run" by typing ```./run```.
 
-![Runnung task](https://github.com/SeveraTheDuck/SolveSquareSeparated/tree/main/photo/1.png)
+![Runnung task](https://github.com/SeveraTheDuck/SolveSquareSeparated/tree/main/photo/1.jpg)
 
 4. You will be asked to type 3 coefficients of your equation. Press enter after that.
 
-![Type coefficients](https://github.com/SeveraTheDuck/SolveSquareSeparated/tree/main/photo/2.png)
+![Type coefficients](https://github.com/SeveraTheDuck/SolveSquareSeparated/tree/main/photo/2.jpg)
 
 5. You will get answer depending on your coefficients. There can be zero, one, two or infinite number of roots.
 
-![Answer](https://github.com/SeveraTheDuck/SolveSquareSeparated/tree/main/photo/3.png)
+![Answer](https://github.com/SeveraTheDuck/SolveSquareSeparated/tree/main/photo/3.jpg)
 
 If you type coefficients in wrong format (like letters), the program will end. Run it once again.
 
@@ -41,7 +41,7 @@ If you type coefficients in wrong format (like letters), the program will end. R
 5. You will be asked whether you want to run tests or not. Press y if yes and n if no.
 6. The program will display number of succeed tests.
 
-![Running tests](https://github.com/SeveraTheDuck/SolveSquareSeparated/tree/main/photo/4.png)
+![Running tests](https://github.com/SeveraTheDuck/SolveSquareSeparated/tree/main/photo/4.jpg)
 
 7. You will be asked to type 3 coefficients of your equation. Press enter after that.
 8. You will get answer depending on your coefficients. There can be zero, one, two or infinite number of roots.
