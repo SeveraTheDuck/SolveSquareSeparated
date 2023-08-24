@@ -3,7 +3,8 @@
 #include "../headers/output.h"
 #include "../headers/test.h"
 
-//readme
+// аргументы командной строки (--solve)
+// картинки
 
 int main(int /*argc*/, char** /*argv*/)
 {

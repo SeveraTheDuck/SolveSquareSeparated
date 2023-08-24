@@ -17,9 +17,17 @@ it is highly recommend to run them). You can read how to enable test mode down b
 1. Download the *repository.rar* file, unzip it wherever you like.
 2. Open your terminal in runtask folder(it is *terminal.app* on MacOS
     and Linux and *PowerShell* on Windows).
-3. In terminal, run file "run" by typing ./run.
+3. In terminal, run file "run" by typing ```./run```.
+
+![Runnung task](https://github.com/SeveraTheDuck/SolveSquareSeparated/tree/main/photo/1.png)
+
 4. You will be asked to type 3 coefficients of your equation. Press enter after that.
+
+![Type coefficients](https://github.com/SeveraTheDuck/SolveSquareSeparated/tree/main/photo/2.png)
+
 5. You will get answer depending on your coefficients. There can be zero, one, two or infinite number of roots.
+
+![Answer](https://github.com/SeveraTheDuck/SolveSquareSeparated/tree/main/photo/3.png)
 
 If you type coefficients in wrong format (like letters), the program will end. Run it once again.
 
@@ -28,9 +36,12 @@ If you type coefficients in wrong format (like letters), the program will end. R
 1. Download the *repository.rar* file, unzip it wherever you like.
 2. Open your terminal in runtask folder(it is *terminal.app* on MacOS
     and Linux and *PowerShell* on Windows).
-3. Open *makefile* in any text editor and add "-D _DEBUG" after "=" in 2<sup>nd</sup> and 3<sup>rd</sup> lines.
-4. In terminal, run file "run" by typing ./run.
+3. Open *makefile* in any text editor and add ```-D _DEBUG``` after "=" in 2<sup>nd</sup> and 3<sup>rd</sup> lines.
+4. In terminal, run file "run" by typing ```./run```.
 5. You will be asked whether you want to run tests or not. Press y if yes and n if no.
 6. The program will display number of succeed tests.
+
+![Running tests](https://github.com/SeveraTheDuck/SolveSquareSeparated/tree/main/photo/4.png)
+
 7. You will be asked to type 3 coefficients of your equation. Press enter after that.
 8. You will get answer depending on your coefficients. There can be zero, one, two or infinite number of roots.
