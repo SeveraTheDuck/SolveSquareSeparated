@@ -1,8 +1,6 @@
 #ifndef __TEST_H
 #define __TEST_H
 
-
-
 /**
     \brief This function tests given equation.
 
@@ -10,7 +8,6 @@
     with reference ones.
 */
 int TestEquation(struct TestsStruct* test_container,
-                    struct CoefficientsStruct* equation_coefficients,
                     struct RootsStruct* equation_roots,
                     const int test_number);
 
@@ -20,7 +17,6 @@ int TestEquation(struct TestsStruct* test_container,
     It scans users desire if they want to run tests.
     If so, it scans reference values from file and tests the programm.
 */
-void UnitTests(struct CoefficientsStruct* equation_coefficients,
-                struct RootsStruct* equation_roots);
+void UnitTests(struct RootsStruct* equation_roots);
 
 #endif

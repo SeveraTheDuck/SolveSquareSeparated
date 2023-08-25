@@ -1,29 +1,37 @@
 #include "../headers/header.h"
-#include "../headers/solve.h"
-#include "../headers/output.h"
+#include "../headers/arg.h"
 #include "../headers/test.h"
 
-// аргументы командной строки (--solve)
-// картинки
+// imaginarium
+// auto-collect files to compile @< $(wildcard ....)
 
-int main(int /*argc*/, char** /*argv*/)
+int main(int argc, char** argv)
 {
     struct CoefficientsStruct equation_coefficients = {.a = 0, .b = 0, .c = 0};
     struct RootsStruct equation_roots = {.x1 = 0, .x2 = 0};
-    TypeOfRoots number_of_roots = TypeOfRoots::SS_NO_ROOTS;
     #ifdef _DEBUG
-        UnitTests(&equation_coefficients, &equation_roots);
+        UnitTests(&equation_roots);
     #endif
     printf("Let us solve your quadratic equation!\n");
 
-    if (!GetInput(&equation_coefficients))
+    if (argc == 1)
     {
-        printf("Please, check the input type\n");
-        return 1;
+        ConsoleInput(&equation_coefficients, &equation_roots);
+        return 0;
     }
 
-    number_of_roots = SolveGivenEquation(&equation_coefficients, &equation_roots);
+    if (argc > 3)
+    {
+        printf("Too many arguments from the command line");
+        return 0;
+    }
 
-    PrintOutput(number_of_roots, &equation_roots);
+    if (!strcmp(argv[1], "--file"))
+    {
+        FileInput(&equation_coefficients, &equation_roots, argv);
+        return 0;
+    }
+
+    printf("Wrong command line input.");
     return 0;
 }

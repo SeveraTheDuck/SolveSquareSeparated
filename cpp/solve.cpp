@@ -1,5 +1,6 @@
 #include "../headers/header.h"
 #include "../headers/simple.h"
+#include "../headers/solve.h"
 
 TypeOfRoots SolveLinearEquation(const struct CoefficientsStruct* equation_coefficients,
                                 struct RootsStruct* equation_roots)
@@ -37,6 +38,7 @@ TypeOfRoots SolveQuadraticEquation(const struct CoefficientsStruct* equation_coe
     double D = FindDiscriminant(equation_coefficients);
     if (D <= -EPS)
     {
+
         return TypeOfRoots::SS_NO_ROOTS;
     }
     else if (CompareEquality(D, 0))

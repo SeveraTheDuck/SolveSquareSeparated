@@ -15,6 +15,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <assert.h>
+#include <string.h>
 
 /**
     \brief This enum names cases of different number of roots.
@@ -23,10 +24,10 @@
 */
 enum TypeOfRoots
 {
-    SS_NO_ROOTS = 0,
-    SS_ONE_ROOT = 1,
-    SS_TWO_ROOTS = 2,
-    SS_INF_ROOTS = 3
+    SS_NO_ROOTS = 0,  ///< This is case of no roots
+    SS_ONE_ROOT = 1,  ///< This is case of one root
+    SS_TWO_ROOTS = 2, ///< This is case of two roots
+    SS_INF_ROOTS = 3  ///< This is case of infinite number of roots
 };
 
 /**
@@ -54,8 +55,8 @@ struct RootsStruct
 */
 struct TestsStruct
 {
-    double a, b, c;
-    double x1_ref, x2_ref;
+    struct CoefficientsStruct equation_coefficients;
+    struct RootsStruct        equation_roots_ref;
     int number_of_roots_ref;
 };
 

@@ -79,22 +79,26 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="header_8h_source.html">../headers/header.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="output_8h_source.html">../headers/output.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a21774da6544f80740ce23187d391bb0e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8cpp.html#a21774da6544f80740ce23187d391bb0e">GetInput</a> (struct <a class="el" href="struct_coefficients_struct.html">CoefficientsStruct</a> *equation_coefficients)</td></tr>
 <tr class="memdesc:a21774da6544f80740ce23187d391bb0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function scans 3 coefficients of the quadratic equation.  <br /></td></tr>
 <tr class="separator:a21774da6544f80740ce23187d391bb0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abae453cd3b764e69068745651530641f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8cpp.html#abae453cd3b764e69068745651530641f">GetFileInput</a> (FILE *fp, struct <a class="el" href="struct_tests_struct.html">TestsStruct</a> *test_container)</td></tr>
-<tr class="memdesc:abae453cd3b764e69068745651530641f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function scans reference values for tests from file.  <br /></td></tr>
-<tr class="separator:abae453cd3b764e69068745651530641f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa983800a4c365c228f1ce69d764bbfd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8cpp.html#aaa983800a4c365c228f1ce69d764bbfd">GetFileInput</a> (FILE *fp, struct <a class="el" href="struct_coefficients_struct.html">CoefficientsStruct</a> *equation_coefficients)</td></tr>
+<tr class="memdesc:aaa983800a4c365c228f1ce69d764bbfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function scans 3 coefficients of the quadratic equation from given file.  <br /></td></tr>
+<tr class="separator:aaa983800a4c365c228f1ce69d764bbfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73c1067be76288666e9a9038aabc9c7b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8cpp.html#a73c1067be76288666e9a9038aabc9c7b">GetTestFileInput</a> (FILE *fp, struct <a class="el" href="struct_tests_struct.html">TestsStruct</a> *test_container)</td></tr>
+<tr class="memdesc:a73c1067be76288666e9a9038aabc9c7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function scans reference values for tests from file.  <br /></td></tr>
+<tr class="separator:a73c1067be76288666e9a9038aabc9c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bbf9092628be32e0f3f936720fa0dba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8cpp.html#a0bbf9092628be32e0f3f936720fa0dba">PrintOutput</a> (const <a class="el" href="header_8h.html#ae911733aa9694505c4a88cc011082fb4">TypeOfRoots</a> number_of_roots, const struct <a class="el" href="struct_roots_struct.html">RootsStruct</a> *equation_roots)</td></tr>
 <tr class="memdesc:a0bbf9092628be32e0f3f936720fa0dba"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function prints a sentence about number of roots and prints them if exist.  <br /></td></tr>
 <tr class="separator:a0bbf9092628be32e0f3f936720fa0dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="abae453cd3b764e69068745651530641f" name="abae453cd3b764e69068745651530641f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abae453cd3b764e69068745651530641f">&#9670;&#160;</a></span>GetFileInput()</h2>
+<a id="aaa983800a4c365c228f1ce69d764bbfd" name="aaa983800a4c365c228f1ce69d764bbfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa983800a4c365c228f1ce69d764bbfd">&#9670;&#160;</a></span>GetFileInput()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -108,8 +112,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct <a class="el" href="struct_tests_struct.html">TestsStruct</a> *&#160;</td>
-          <td class="paramname"><em>test_container</em>&#160;</td>
+          <td class="paramtype">struct <a class="el" href="struct_coefficients_struct.html">CoefficientsStruct</a> *&#160;</td>
+          <td class="paramname"><em>equation_coefficients</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -119,8 +123,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This function scans reference values for tests from file. </p>
-<p>It uses structure to combine different values into group. </p>
+<p>This function scans 3 coefficients of the quadratic equation from given file. </p>
+<p>It uses stucture to combine coefficients into group. </p>
 
 </div>
 </div>
@@ -142,6 +146,37 @@ Functions</h2></td></tr>
 
 <p>This function scans 3 coefficients of the quadratic equation. </p>
 <p>It uses stucture to combine coefficients into group. </p>
+
+</div>
+</div>
+<a id="a73c1067be76288666e9a9038aabc9c7b" name="a73c1067be76288666e9a9038aabc9c7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73c1067be76288666e9a9038aabc9c7b">&#9670;&#160;</a></span>GetTestFileInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GetTestFileInput </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="struct_tests_struct.html">TestsStruct</a> *&#160;</td>
+          <td class="paramname"><em>test_container</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function scans reference values for tests from file. </p>
+<p>It uses structure to combine different values into group. </p>
 
 </div>
 </div>

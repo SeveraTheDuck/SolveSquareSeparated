@@ -1,4 +1,5 @@
 #include "../headers/header.h"
+#include "../headers/simple.h"
 
 double FindDiscriminant(const struct CoefficientsStruct* equation_coefficients)
 {
@@ -23,6 +24,5 @@ double FindSecondRoot(const double sqrt_D, const struct CoefficientsStruct* equa
 
 bool CompareEquality(const double a, const double b)
 {
-    if (fabs(a - b) < EPS) return true;
-    return false;
+    return fabs(a - b) < EPS;
 }
