@@ -8,7 +8,7 @@
     The choice between them depends on coefficient a (before x^2).
 */
 TypeOfRoots SolveGivenEquation(const struct CoefficientsStruct* equation_coefficients,
-                                struct RootsStruct* equation_roots);
+                               struct RootsStruct* equation_roots);
 
 /**
     \brief This function solves the linear equation and
@@ -26,6 +26,6 @@ TypeOfRoots SolveLinearEquation(const struct CoefficientsStruct* equation_coeffi
     It is being called if coefficient a (before x^2) doesn't equal to zero.
 */
 enum TypeOfRoots SolveQuadraticEquation(const struct CoefficientsStruct* equation_coefficients,
-                                struct RootsStruct* equation_roots);
+                                        struct RootsStruct* equation_roots);
 
 #endif

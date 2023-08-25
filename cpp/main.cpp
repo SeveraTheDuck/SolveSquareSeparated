@@ -1,9 +1,6 @@
-#include "../headers/header.h"
-#include "../headers/arg.h"
-#include "../headers/test.h"
-
-// imaginarium
-// auto-collect files to compile @< $(wildcard ....)
+#include "header.h"
+#include "arg.h"
+#include "test.h"
 
 int main(int argc, char** argv)
 {

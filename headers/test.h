@@ -8,8 +8,8 @@
     with reference ones.
 */
 int TestEquation(struct TestsStruct* test_container,
-                    struct RootsStruct* equation_roots,
-                    const int test_number);
+                 struct RootsStruct* equation_roots,
+                 const int test_number);
 
 /**
     \brief This function starts unit tests.

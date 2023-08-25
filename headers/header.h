@@ -1,6 +1,15 @@
 #ifndef __HEADER_H
 #define __HEADER_H
 
+#include <stdio.h>
+#include <math.h>
+#include <assert.h>
+#include <string.h>
+
+#define __RED_TEXT__(expression) "\033[31;1m" expression "\033[0m"
+#define __GREEN_TEXT__(expression) "\033[32;1m" expression "\033[0m"
+#define __YELLOW_TEXT__(expression) "\033[33;1m" expression "\033[0m"
+
 #define MYASSERT(expression)
 #ifdef _DEBUG
     #undef MYASSERT
@@ -12,10 +21,10 @@
         }
 #endif
 
-#include <stdio.h>
-#include <math.h>
-#include <assert.h>
-#include <string.h>
+/**
+    \brief This constant is being used for double comparison.
+*/
+const double EPS = 1.0e-9;
 
 /**
     \brief This enum names cases of different number of roots.
@@ -59,10 +68,5 @@ struct TestsStruct
     struct RootsStruct        equation_roots_ref;
     int number_of_roots_ref;
 };
-
-/**
-    \brief This constant is being used for double comparison.
-*/
-const double EPS = 1.0e-9;
 
 #endif

@@ -1,5 +1,5 @@
-#include "../headers/header.h"
-#include "../headers/simple.h"
+#include "header.h"
+#include "simple.h"
 
 double FindDiscriminant(const struct CoefficientsStruct* equation_coefficients)
 {

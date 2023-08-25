@@ -1,6 +1,6 @@
-#include "../headers/header.h"
-#include "../headers/simple.h"
-#include "../headers/solve.h"
+#include "header.h"
+#include "simple.h"
+#include "solve.h"
 
 TypeOfRoots SolveLinearEquation(const struct CoefficientsStruct* equation_coefficients,
                                 struct RootsStruct* equation_roots)
@@ -30,7 +30,7 @@ TypeOfRoots SolveLinearEquation(const struct CoefficientsStruct* equation_coeffi
 }
 
 TypeOfRoots SolveQuadraticEquation(const struct CoefficientsStruct* equation_coefficients,
-                                struct RootsStruct* equation_roots)
+                                   struct RootsStruct* equation_roots)
 {
     MYASSERT(equation_coefficients != NULL);
     MYASSERT(equation_roots        != NULL);
@@ -55,8 +55,9 @@ TypeOfRoots SolveQuadraticEquation(const struct CoefficientsStruct* equation_coe
     }
 }
 
+// !
 TypeOfRoots SolveGivenEquation(const struct CoefficientsStruct* equation_coefficients,
-                                struct RootsStruct* equation_roots)
+                               struct RootsStruct* equation_roots)
 {
     MYASSERT(equation_coefficients != NULL);
     MYASSERT(equation_roots        != NULL);

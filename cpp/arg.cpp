@@ -1,10 +1,10 @@
-#include "../headers/header.h"
-#include "../headers/solve.h"
-#include "../headers/output.h"
-#include "../headers/arg.h"
+#include "header.h"
+#include "solve.h"
+#include "output.h"
+#include "arg.h"
 
 void ConsoleInput(struct CoefficientsStruct* equation_coefficients,
-                    struct RootsStruct* equation_roots)
+                  struct RootsStruct* equation_roots)
 {
     TypeOfRoots number_of_roots = TypeOfRoots::SS_NO_ROOTS;
 
@@ -19,8 +19,8 @@ void ConsoleInput(struct CoefficientsStruct* equation_coefficients,
 }
 
 void FileInput(struct CoefficientsStruct* equation_coefficients,
-                    struct RootsStruct* equation_roots,
-                    char** argv)
+               struct RootsStruct* equation_roots,
+               char** argv)
 {
     TypeOfRoots number_of_roots = TypeOfRoots::SS_NO_ROOTS;
     FILE *fp = fopen(argv[2], "r");

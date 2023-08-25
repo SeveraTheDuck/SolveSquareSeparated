@@ -1,12 +1,12 @@
-#include "../headers/header.h"
-#include "../headers/output.h"
-#include "../headers/solve.h"
-#include "../headers/simple.h"
-#include "../headers/test.h"
+#include "header.h"
+#include "output.h"
+#include "solve.h"
+#include "simple.h"
+#include "test.h"
 
 int TestEquation (struct TestsStruct* test_container,
-                    struct RootsStruct* equation_roots,
-                    const int test_number)
+                  struct RootsStruct* equation_roots,
+                  const int test_number)
 {
     MYASSERT(test_container != NULL);
     MYASSERT(equation_roots != NULL);
@@ -14,16 +14,18 @@ int TestEquation (struct TestsStruct* test_container,
     equation_roots->x1 = 0;
     equation_roots->x2 = 0;
 
-    TypeOfRoots number_of_roots = SolveGivenEquation(&(test_container->equation_coefficients), equation_roots);
+    TypeOfRoots number_of_roots
+        = SolveGivenEquation(&(test_container->equation_coefficients), equation_roots);
 
     if (!CompareEquality(equation_roots->x1, test_container->equation_roots_ref.x1) ||
         !CompareEquality(equation_roots->x2, test_container->equation_roots_ref.x2) ||
         number_of_roots != test_container->number_of_roots_ref)
     {
-        printf("\033[31;1mFAILED TEST NUMBER %3d:\033[0m ", test_number);
-        printf("x1 = %10lf, x2 = %10lf, \n", equation_roots->x1, equation_roots->x2);
+        printf(__RED_TEXT__("FAILED TEST NUMBER %3d: "), test_number);
+        printf("\nx1 = %10lf, x2 = %10lf, \n", equation_roots->x1, equation_roots->x2);
         printf("number of roots = %d\n", number_of_roots);
-        printf("EXPECTED:               x1 = %10lf, x2 = %10lf, \n", test_container->equation_roots_ref.x1, test_container->equation_roots_ref.x2);
+        printf("EXPECTED:\nx1 = %10lf, ", test_container->equation_roots_ref.x1);
+        printf("x2 = %10lf, \n", test_container->equation_roots_ref.x2);
         printf("number of roots = %d\n", test_container->number_of_roots_ref);
         printf("Let's head to your own equation!\n");
         return 0;
@@ -39,10 +41,11 @@ void UnitTests(struct RootsStruct* equation_roots)
     MYASSERT(equation_roots        != NULL);
 
     struct TestsStruct test_container = {.equation_coefficients.a = 0,
-                                        .equation_coefficients.b = 0,
-                                        .equation_coefficients.c = 0,
-                                        .equation_roots_ref.x1 = 0, .equation_roots_ref.x2 = 0,
-                                        .number_of_roots_ref = SS_NO_ROOTS};
+                                         .equation_coefficients.b = 0,
+                                         .equation_coefficients.c = 0,
+                                         .equation_roots_ref.x1 = 0,
+                                         .equation_roots_ref.x2 = 0,
+                                         .number_of_roots_ref = SS_NO_ROOTS};
     char test_selector = 'n';
     printf("Do you want to run prepared tests? [y/n]\n");
     scanf("%c", &test_selector);
@@ -56,7 +59,8 @@ void UnitTests(struct RootsStruct* equation_roots)
             return;
         }
 
-        int number_of_tests = 0, number_of_success = 0;
+        int number_of_tests = 0;
+        int number_of_success = 0;
 
         fscanf(fp, "%d", &number_of_tests);
         for (int i = 0; i < number_of_tests; i++)
@@ -71,11 +75,11 @@ void UnitTests(struct RootsStruct* equation_roots)
 
         if (number_of_success == number_of_tests)
         {
-            printf("\033[32;1mOK!\033[0m ");
+            printf(__GREEN_TEXT__("OK! "));
         }
         else
         {
-            printf("\033[33;1mSome tests are failed.\033[0m ");
+            printf(__YELLOW_TEXT__("\033[33;1mSome tests are failed. "));
         }
         printf("Succes: %d\n", number_of_success);
         fclose(fp);

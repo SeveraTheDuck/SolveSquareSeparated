@@ -1,5 +1,5 @@
-#include "../headers/header.h"
-#include "../headers/output.h"
+#include "header.h"
+#include "output.h"
 
 bool GetInput(struct CoefficientsStruct* equation_coefficients)
 {
@@ -83,7 +83,8 @@ void PrintOutput(const TypeOfRoots number_of_roots, const struct RootsStruct* eq
             printf("The only root is %lf\n\n", equation_roots->x1);
             break;
         case TypeOfRoots::SS_TWO_ROOTS:
-            printf("The quadratic equation has two roots:\nx1 = %lf and x2 = %lf\n\n", equation_roots->x1, equation_roots->x2);
+            printf("The quadratic equation has two roots:\n");
+            printf("x1 = %lf and x2 = %lf\n\n", equation_roots->x1, equation_roots->x2);
             break;
         case TypeOfRoots::SS_INF_ROOTS:
             printf("Infinite number of roots\n\n");

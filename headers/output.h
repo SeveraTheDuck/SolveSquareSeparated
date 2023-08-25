@@ -1,6 +1,8 @@
 #ifndef __IO_H
 #define __IO_H
 
+#include <stdio.h>
+
 /**
     \brief This function scans 3 coefficients of the quadratic equation.
 
