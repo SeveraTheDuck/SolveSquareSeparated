@@ -70,7 +70,22 @@ bool GetTestFileInput(FILE* fp, struct TestsStruct* test_container)
     return true;
 }
 
-void PrintOutput(const TypeOfRoots number_of_roots, const struct RootsStruct* equation_roots)
+void PrintWrongTestOutput(struct TestsStruct* test_container,
+                          struct RootsStruct* equation_roots,
+                          const int test_number,
+                          const int number_of_roots)
+{
+    printf(__RED_TEXT__("FAILED TEST NUMBER %3d: "), test_number);
+    printf("\nx1 = %10lf, x2 = %10lf, \n", equation_roots->x1, equation_roots->x2);
+    printf("number of roots = %d\n", number_of_roots);
+    printf("EXPECTED:\nx1 = %10lf, ", test_container->equation_roots_ref.x1);
+    printf("x2 = %10lf, \n", test_container->equation_roots_ref.x2);
+    printf("number of roots = %d\n", test_container->number_of_roots_ref);
+    printf("Let's head to your own equation!\n");
+}
+
+void PrintOutput(const TypeOfRoots number_of_roots,
+                 const struct RootsStruct* equation_roots)
 {
     MYASSERT(equation_roots != NULL);
 

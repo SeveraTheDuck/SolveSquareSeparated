@@ -55,7 +55,6 @@ TypeOfRoots SolveQuadraticEquation(const struct CoefficientsStruct* equation_coe
     }
 }
 
-// !
 TypeOfRoots SolveGivenEquation(const struct CoefficientsStruct* equation_coefficients,
                                struct RootsStruct* equation_roots)
 {

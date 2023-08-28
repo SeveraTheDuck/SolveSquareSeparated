@@ -21,24 +21,15 @@ int TestEquation (struct TestsStruct* test_container,
         !CompareEquality(equation_roots->x2, test_container->equation_roots_ref.x2) ||
         number_of_roots != test_container->number_of_roots_ref)
     {
-        printf(__RED_TEXT__("FAILED TEST NUMBER %3d: "), test_number);
-        printf("\nx1 = %10lf, x2 = %10lf, \n", equation_roots->x1, equation_roots->x2);
-        printf("number of roots = %d\n", number_of_roots);
-        printf("EXPECTED:\nx1 = %10lf, ", test_container->equation_roots_ref.x1);
-        printf("x2 = %10lf, \n", test_container->equation_roots_ref.x2);
-        printf("number of roots = %d\n", test_container->number_of_roots_ref);
-        printf("Let's head to your own equation!\n");
+        PrintWrongTestOutput(test_container, equation_roots, test_number, number_of_roots);
         return 0;
     }
-
     return 1;
-
 }
 
 void UnitTests(struct RootsStruct* equation_roots)
 {
-
-    MYASSERT(equation_roots        != NULL);
+    MYASSERT(equation_roots != NULL);
 
     struct TestsStruct test_container = {.equation_coefficients.a = 0,
                                          .equation_coefficients.b = 0,
@@ -79,7 +70,7 @@ void UnitTests(struct RootsStruct* equation_roots)
         }
         else
         {
-            printf(__YELLOW_TEXT__("\033[33;1mSome tests are failed. "));
+            printf(__YELLOW_TEXT__("Some tests are failed. "));
         }
         printf("Succes: %d\n", number_of_success);
         fclose(fp);

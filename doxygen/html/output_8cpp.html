@@ -78,8 +78,8 @@ $(function() {
   <div class="headertitle"><div class="title">output.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="header_8h_source.html">../headers/header.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="output_8h_source.html">../headers/output.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="header_8h_source.html">header.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="output_8h_source.html">output.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -92,6 +92,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a73c1067be76288666e9a9038aabc9c7b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8cpp.html#a73c1067be76288666e9a9038aabc9c7b">GetTestFileInput</a> (FILE *fp, struct <a class="el" href="struct_tests_struct.html">TestsStruct</a> *test_container)</td></tr>
 <tr class="memdesc:a73c1067be76288666e9a9038aabc9c7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function scans reference values for tests from file.  <br /></td></tr>
 <tr class="separator:a73c1067be76288666e9a9038aabc9c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90531b281dd610d1e405981bb2fa4f0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8cpp.html#a90531b281dd610d1e405981bb2fa4f0e">PrintWrongTestOutput</a> (struct <a class="el" href="struct_tests_struct.html">TestsStruct</a> *test_container, struct <a class="el" href="struct_roots_struct.html">RootsStruct</a> *equation_roots, const int test_number, const int number_of_roots)</td></tr>
+<tr class="memdesc:a90531b281dd610d1e405981bb2fa4f0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function prints output for a wrong test.  <br /></td></tr>
+<tr class="separator:a90531b281dd610d1e405981bb2fa4f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bbf9092628be32e0f3f936720fa0dba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8cpp.html#a0bbf9092628be32e0f3f936720fa0dba">PrintOutput</a> (const <a class="el" href="header_8h.html#ae911733aa9694505c4a88cc011082fb4">TypeOfRoots</a> number_of_roots, const struct <a class="el" href="struct_roots_struct.html">RootsStruct</a> *equation_roots)</td></tr>
 <tr class="memdesc:a0bbf9092628be32e0f3f936720fa0dba"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function prints a sentence about number of roots and prints them if exist.  <br /></td></tr>
 <tr class="separator:a0bbf9092628be32e0f3f936720fa0dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,6 +210,48 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This function prints a sentence about number of roots and prints them if exist. </p>
+
+</div>
+</div>
+<a id="a90531b281dd610d1e405981bb2fa4f0e" name="a90531b281dd610d1e405981bb2fa4f0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90531b281dd610d1e405981bb2fa4f0e">&#9670;&#160;</a></span>PrintWrongTestOutput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrintWrongTestOutput </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_tests_struct.html">TestsStruct</a> *&#160;</td>
+          <td class="paramname"><em>test_container</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="struct_roots_struct.html">RootsStruct</a> *&#160;</td>
+          <td class="paramname"><em>equation_roots</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>test_number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>number_of_roots</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function prints output for a wrong test. </p>
 
 </div>
 </div>
