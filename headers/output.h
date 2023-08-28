@@ -2,6 +2,11 @@
 #define __IO_H
 
 /**
+    \brief This function fixes -0.000 bug caused by double.
+*/
+double IsZeroRoot(double x);
+
+/**
     \brief This function scans 3 coefficients of the quadratic equation.
 
     It uses stucture to combine coefficients into group.

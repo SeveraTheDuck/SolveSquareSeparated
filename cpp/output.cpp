@@ -1,5 +1,12 @@
 #include "header.h"
 #include "output.h"
+#include "simple.h"
+
+double IsZeroRoot(double x)
+{
+    if (CompareEquality(x, 0)) return 0.0;
+    else return x;
+}
 
 bool GetInput(struct CoefficientsStruct* equation_coefficients)
 {
@@ -95,11 +102,11 @@ void PrintOutput(const TypeOfRoots number_of_roots,
             printf("Cannot be solved\n\n");
             break;
         case TypeOfRoots::SS_ONE_ROOT:
-            printf("The only root is %lf\n\n", equation_roots->x1);
+            printf("The only root is %lf\n\n", IsZeroRoot(equation_roots->x1));
             break;
         case TypeOfRoots::SS_TWO_ROOTS:
             printf("The quadratic equation has two roots:\n");
-            printf("x1 = %lf and x2 = %lf\n\n", equation_roots->x1, equation_roots->x2);
+            printf("x1 = %lf and x2 = %lf\n\n", IsZeroRoot(equation_roots->x1), IsZeroRoot(equation_roots->x2));
             break;
         case TypeOfRoots::SS_INF_ROOTS:
             printf("Infinite number of roots\n\n");

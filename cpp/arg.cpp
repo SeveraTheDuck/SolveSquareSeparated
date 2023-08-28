@@ -39,7 +39,7 @@ void FileInput(struct CoefficientsStruct* equation_coefficients,
 
         PrintOutput(number_of_roots, equation_roots);
         ch = getc(fp);
-        ch = getc(fp);
+        ch = getc(fp); // double getc() serves to separate lf from eof
     }
     fclose(fp);
 }
