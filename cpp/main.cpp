@@ -11,19 +11,19 @@ int main(int argc, char** argv)
     #endif
     printf("Let us solve your quadratic equation!\n");
 
-    if (argc == 1)
+    if (argc == 1) // no input from command line, standart coefficients input
     {
         ConsoleInput(&equation_coefficients, &equation_roots);
         return 0;
     }
 
-    if (argc > 3)
+    if (argc > 3) // Not yet implemented :)
     {
         printf("Too many arguments from the command line");
         return 0;
     }
 
-    if (!strcmp(argv[1], "--file"))
+    if (!strcmp(argv[1], "--file")) // input from input.txt file
     {
         FileInput(&equation_coefficients, &equation_roots, argv);
         return 0;

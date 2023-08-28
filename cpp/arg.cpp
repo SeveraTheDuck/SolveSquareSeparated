@@ -26,7 +26,7 @@ void FileInput(struct CoefficientsStruct* equation_coefficients,
     FILE *fp = fopen(argv[2], "r");
     MYASSERT(fp != NULL);
     int ch = getc(fp);
-
+//пересмотреть?
     while(ch != EOF)
     {
         ungetc(ch, fp);

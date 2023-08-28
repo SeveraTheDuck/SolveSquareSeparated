@@ -2,12 +2,6 @@
 #include "output.h"
 #include "simple.h"
 
-double IsZeroRoot(double x)
-{
-    if (CompareEquality(x, 0)) return 0.0;
-    else return x;
-}
-
 bool GetInput(struct CoefficientsStruct* equation_coefficients)
 {
     MYASSERT(equation_coefficients != NULL);
@@ -88,7 +82,6 @@ void PrintWrongTestOutput(struct TestsStruct* test_container,
     printf("EXPECTED:\nx1 = %10lf, ", test_container->equation_roots_ref.x1);
     printf("x2 = %10lf, \n", test_container->equation_roots_ref.x2);
     printf("number of roots = %d\n", test_container->number_of_roots_ref);
-    printf("Let's head to your own equation!\n");
 }
 
 void PrintOutput(const TypeOfRoots number_of_roots,
@@ -106,7 +99,8 @@ void PrintOutput(const TypeOfRoots number_of_roots,
             break;
         case TypeOfRoots::SS_TWO_ROOTS:
             printf("The quadratic equation has two roots:\n");
-            printf("x1 = %lf and x2 = %lf\n\n", IsZeroRoot(equation_roots->x1), IsZeroRoot(equation_roots->x2));
+            printf("x1 = %lf and x2 = %lf\n\n", IsZeroRoot(equation_roots->x1),
+                                                IsZeroRoot(equation_roots->x2));
             break;
         case TypeOfRoots::SS_INF_ROOTS:
             printf("Infinite number of roots\n\n");

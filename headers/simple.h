@@ -2,6 +2,11 @@
 #define __SIMPLE_H
 
 /**
+    \brief This function fixes -0.000 bug caused by double.
+*/
+double IsZeroRoot(double x);
+
+/**
     \brief This function finds and returns discriminant of the
     quadratic equation using 3 coefficients.
 

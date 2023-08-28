@@ -1,3 +1,5 @@
+#include <ctype.h>
+
 #include "header.h"
 #include "output.h"
 #include "solve.h"
@@ -34,19 +36,20 @@ void UnitTests(struct RootsStruct* equation_roots)
     struct TestsStruct test_container = {.equation_coefficients.a = 0,
                                          .equation_coefficients.b = 0,
                                          .equation_coefficients.c = 0,
-                                         .equation_roots_ref.x1 = 0,
-                                         .equation_roots_ref.x2 = 0,
-                                         .number_of_roots_ref = SS_NO_ROOTS};
+                                         .equation_roots_ref.x1   = 0,
+                                         .equation_roots_ref.x2   = 0,
+                                         .number_of_roots_ref     = SS_NO_ROOTS};
     char test_selector = 'n';
     printf("Do you want to run prepared tests? [y/n]\n");
-    scanf("%c", &test_selector);
+    test_selector = (char)toupper(getchar());
 
-    if (test_selector == 'y')
+    if (test_selector == 'Y')
     {
-        FILE* fp = fopen("../tests.txt", "r");
+        FILE* fp = fopen("../tests.txt", "r"); // ком строка
         if (fp == NULL)
         {
-            printf("Unnable to open file.\nAutomaticly skipping to your own equation.\n");
+            printf("Unnable to open file ../tests.txt.\n"
+                   "Automaticly skipping to your own equation.\n");
             return;
         }
 
@@ -58,7 +61,7 @@ void UnitTests(struct RootsStruct* equation_roots)
         {
             if (!GetTestFileInput(fp, &test_container))
             {
-                printf("tests.txt has an error. Automaticly skipping to your own equation.\n");
+                printf("../tests.txt has an error. Automaticly skipping to your own equation.\n");
                 return;
             }
             number_of_success += TestEquation(&test_container, equation_roots, i + 1);
@@ -77,7 +80,7 @@ void UnitTests(struct RootsStruct* equation_roots)
         return;
     }
 
-    else if (test_selector != 'n')
+    else if (test_selector != 'N')
     {
         printf("Wrong letter selected. Automaticly skipping to your own equation.\n");
         return;

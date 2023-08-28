@@ -3,12 +3,13 @@
 #include "solve.h"
 
 TypeOfRoots SolveLinearEquation(const struct CoefficientsStruct* equation_coefficients,
-                                struct RootsStruct* equation_roots)
+                                      struct RootsStruct* equation_roots)
 {
     MYASSERT(equation_coefficients != NULL);
     MYASSERT(equation_roots        != NULL);
 
-    if (CompareEquality(equation_coefficients->b, 0) && !CompareEquality(equation_coefficients->c, 0))
+    if (CompareEquality(equation_coefficients->b, 0) &&
+       !CompareEquality(equation_coefficients->c, 0))
     {
         return TypeOfRoots::SS_NO_ROOTS;
     }
@@ -30,7 +31,7 @@ TypeOfRoots SolveLinearEquation(const struct CoefficientsStruct* equation_coeffi
 }
 
 TypeOfRoots SolveQuadraticEquation(const struct CoefficientsStruct* equation_coefficients,
-                                   struct RootsStruct* equation_roots)
+                                         struct RootsStruct* equation_roots)
 {
     MYASSERT(equation_coefficients != NULL);
     MYASSERT(equation_roots        != NULL);
@@ -49,14 +50,14 @@ TypeOfRoots SolveQuadraticEquation(const struct CoefficientsStruct* equation_coe
     else
     {
         double sqrt_D = sqrt(D);
-        equation_roots->x1 = FindFirstRoot(sqrt_D, equation_coefficients);
+        equation_roots->x1 = FindFirstRoot (sqrt_D, equation_coefficients);
         equation_roots->x2 = FindSecondRoot(sqrt_D, equation_coefficients);
         return TypeOfRoots::SS_TWO_ROOTS;
     }
 }
 
 TypeOfRoots SolveGivenEquation(const struct CoefficientsStruct* equation_coefficients,
-                               struct RootsStruct* equation_roots)
+                                     struct RootsStruct* equation_roots)
 {
     MYASSERT(equation_coefficients != NULL);
     MYASSERT(equation_roots        != NULL);
