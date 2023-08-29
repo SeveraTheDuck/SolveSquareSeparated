@@ -24,7 +24,11 @@ void FileInput(struct CoefficientsStruct* equation_coefficients,
 {
     TypeOfRoots number_of_roots = TypeOfRoots::SS_NO_ROOTS;
     FILE *fp = fopen(argv[2], "r");
-    MYASSERT(fp != NULL);
+    if (fp == NULL)
+    {
+        printf("Unable to open file %s", argv[2]);
+        return;
+    }
     int ch = getc(fp);
 //пересмотреть?
     while(ch != EOF)

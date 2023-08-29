@@ -43,13 +43,22 @@ void UnitTests(struct RootsStruct* equation_roots)
     printf("Do you want to run prepared tests? [y/n]\n");
     test_selector = (char)toupper(getchar());
 
+    int skipper = getchar();
+    while (skipper != '\n')
+    {
+        skipper = getchar();
+    }
+
     if (test_selector == 'Y')
     {
-        FILE* fp = fopen("../tests.txt", "r"); // ком строка
+        char input_file_name[50] = "";
+        printf("From what file?\n");
+        scanf("%s", input_file_name);
+        FILE* fp = fopen(input_file_name, "r");
         if (fp == NULL)
         {
-            printf("Unnable to open file ../tests.txt.\n"
-                   "Automaticly skipping to your own equation.\n");
+            printf("Unable to open file %s\n"
+                   "Automaticly skipping to your own equation.\n", input_file_name);
             return;
         }
 
